@@ -1,0 +1,10 @@
+version: '3'
+services:
+  alpine_linux:
+    container_name: ${USERNAME}/alpine_linux
+    build:
+      context: ./alpine_linux
+      args:
+        - NB_USER=${USERNAME}
+        - NB_UID=${UID}
+    image: ${USERNAME}/alpine_linux
